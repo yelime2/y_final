@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>INTERACTION | VANDALISM</title>
+    <link rel="stylesheet" href="page3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+KR:wght@100..900&family=Special+Elite&display=swap" rel="stylesheet">
+</head>
+<body class="g-bg2">
+    <nav>
+        <div>
+        <ul>
+            <li><a href="index.html">← VANDALISM</a></li>
+            <li><a href="page2.html">← GALLERY</a></li>
+        </ul>
+        </div>
+    </nav>
+    <div class="image-stack">
+        <img src="intro1.jpg" alt="Gallery 6" class="stacked-image" onclick="showLargeImage(this.src)">
+        <img src="g-12.png" alt="Gallery 6" class="stacked-image" onclick="showLargeImage(this.src)">
+        <img src="g-13.png" alt="Gallery 7" class="stacked-image" onclick="showLargeImage(this.src)">
+        <img src="g-9.png" alt="Gallery 9" class="stacked-image" onclick="showLargeImage(this.src)">
+        <img src="g-11.png" alt="Gallery 11" class="stacked-image" onclick="showLargeImage(this.src)">
+    </div>
+    <div class="wrap">
+        <div class="content">
+             <p style="width: 400px;">반달리즘, 단순한 파괴일까요? 아니면 숨겨진 메시지를 담은 표현일까요?
+            이 공간은 그 경계를 직접 경험하며 여러분 스스로 답을 찾아가는 체험 공간입니다.
+            원하는 그림을 선택하고, 자유롭게 당신만의 흔적을 남겨보세요.</p>
+            <p style="width: 400px;">Is vandalism simply destruction, or a form of expression carrying a message?
+                This space is designed for you to experience that boundary firsthand and find your own answer.
+                Choose any artwork you like, and freely leave your mark.</p>
+        </div>
+    </div>
+    <div class="large-image-container">
+        <div class="controls">
+            <button onclick="setTool('draw')" class="tool-btn">spray</button>
+            <input type="color" id="colorPicker" value="#000000">
+            <div id="customCursor"></div>
+            <input type="range" id="brushSize" min="10" max="100" value="30">
+            <button onclick="clearCanvas()" class="tool-btn">delete</button>
+            <button onclick="saveImage()" class="tool-btn">save</button>
+        </div>
+      
+        <canvas id="imageCanvas"></canvas>
+    </div>
+   
+    
+    <script src="page3.js"></script>
+    
+</body>
+</html>
